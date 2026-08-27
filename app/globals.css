@@ -27,27 +27,3 @@ body {
   background: #e8b4a2;
   color: #3d342e;
 }
-
-@media print {
-  @page {
-    margin: 10mm;
-    size: A6;
-  }
-
-  html,
-  body {
-    background: #fff !important;
-  }
-
-  header,
-  footer,
-  .print-hide {
-    display: none !important;
-  }
-
-  .print-sheet {
-    margin: 0 !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-}
