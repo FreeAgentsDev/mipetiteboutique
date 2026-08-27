@@ -1,4 +1,4 @@
-import { BagCard } from "@/components/catalog";
+import { Catalog } from "@/components/catalog";
 import { Shell } from "@/components/shell";
 import { SITE } from "@/lib/site";
 
@@ -12,11 +12,11 @@ export default function CatalogoPage() {
         Macramé
       </h1>
       <p className="mt-4 text-center text-sm font-light leading-relaxed text-mute">
-        El mismo bolso en varios colores. Elige uno y pide por Instagram. Los
+        Cinco bolsos, cada uno con su foto. Elige y pide por Instagram. Los
         accesorios no van aquí: cambian con cada evento.
       </p>
       <div className="mt-8">
-        <BagCard />
+        <Catalog />
       </div>
       <p className="mt-8 text-center text-xs leading-relaxed text-mute">
         ¿Un accesorio que viste en feria? Escríbele en{" "}

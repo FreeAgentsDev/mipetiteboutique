@@ -1,23 +1,20 @@
-import Image from "next/image";
-
-import { BagCard } from "@/components/catalog";
+import { Catalog } from "@/components/catalog";
 import { BrandMark } from "@/components/brand-mark";
 import { Shell } from "@/components/shell";
-import { LOOKBOOK, SITE } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 export default function HomePage() {
   return (
     <Shell>
       <div className="text-center">
         <BrandMark size="lg" />
-        <p className="mt-4 font-serif text-3xl italic text-ink">{SITE.name}</p>
-        <p className="mt-1 text-[11px] font-medium tracking-[0.28em] text-mute uppercase">
-          By Isa Quintero · {SITE.city}
+        <p className="mt-3 text-[11px] font-medium tracking-[0.28em] text-mute uppercase">
+          {SITE.city}
         </p>
       </div>
       <p className="mt-6 text-center text-sm font-light leading-relaxed text-ink/80">
-        Bolsos de macramé en varios colores. Los accesorios cambian con cada
-        feria: si viste uno, escríbele a Isa. Envíos a toda Colombia.
+        Bolsos de macramé, cada uno con su foto. Los accesorios cambian con
+        cada feria: si viste uno, escríbele a Isa. Envíos a toda Colombia.
       </p>
 
       <div className="mt-8 flex flex-col gap-3">
@@ -37,15 +34,15 @@ export default function HomePage() {
         </a>
       </div>
 
-      <section className="mt-12">
+      <section id="lookbook" className="mt-12">
         <h2 className="text-center text-[11px] font-medium tracking-[0.22em] text-mute uppercase">
-          El bolso
+          Los bolsos
         </h2>
         <p className="mt-2 text-center text-xs text-mute">
-          Un modelo, varios colores. Isa confirma cuál hay.
+          Fotos de Isa. Confirma cuál hay antes de pedir.
         </p>
         <div className="mt-5">
-          <BagCard />
+          <Catalog />
         </div>
       </section>
 
@@ -66,28 +63,6 @@ export default function HomePage() {
         >
           Preguntar por una pieza
         </a>
-      </section>
-
-      <section id="lookbook" className="mt-14">
-        <h2 className="text-center text-[11px] font-medium tracking-[0.22em] text-mute uppercase">
-          Lookbook
-        </h2>
-        <div className="mt-5 grid grid-cols-2 gap-2">
-          {LOOKBOOK.map((photo) => (
-            <div
-              key={photo.src}
-              className="relative aspect-3/4 overflow-hidden rounded-2xl"
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 512px) 50vw, 240px"
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
       </section>
     </Shell>
   );

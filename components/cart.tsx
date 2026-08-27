@@ -28,7 +28,7 @@ type CartContextValue = {
   orderText: string;
 };
 
-const STORAGE_KEY = "petite-cart-v2";
+const STORAGE_KEY = "petite-cart-v3";
 const CartContext = createContext<CartContextValue | null>(null);
 
 function buildOrder(lines: CartLine[]) {

@@ -14,11 +14,11 @@ npm run dev
 http://localhost:3021
 
 - `/` ficha y lookbook
-- `/catalogo` bolso de macramé en varios colores
+- `/catalogo` cinco bolsos con foto de Isa
 - `/qr` descarga del diseño para imprimir
 
 Los accesorios no se catalogan: cambian con cada feria.
 
 WhatsApp, cuando lo tenga: `NEXT_PUBLIC_WHATSAPP=57…`
 
-Pendiente de Isa: logo en alta, precios, colores exactos del bolso, WhatsApp y fotos por color.
+Pendiente de Isa: precios y WhatsApp.

@@ -33,30 +33,42 @@ export function qrImageUrl(data: string, size = 280) {
   return `https://api.qrserver.com/v1/create-qr-code/?${params.toString()}`;
 }
 
-export type BagColor = {
+export type Bag = {
   id: string;
   name: string;
-  swatch: string;
+  image: string;
+  blurb: string;
 };
 
-export const BAG = {
-  id: "bolso-macrame",
-  name: "Bolso de macramé",
-  image: "/media/ig01.jpg",
-  blurb:
-    "El mismo modelo, tejido a mano, asas de bambú. Elige el color; Isa confirma si hay existencias.",
-  colors: [
-    { id: "natural", name: "Natural", swatch: "#e8d9c4" },
-    { id: "yute", name: "Yute", swatch: "#c4a574" },
-    { id: "negro", name: "Negro", swatch: "#1c1917" },
-  ] satisfies BagColor[],
-} as const;
-
-export const LOOKBOOK = [
-  { src: "/media/ig01.jpg", alt: "Bolso de macramé" },
-  { src: "/media/ig08.jpg", alt: "Stand de Mi Petite Boutique" },
-  { src: "/media/ig11.jpg", alt: "Bolso macramé" },
-  { src: "/media/ig07.jpg", alt: "Accesorios de feria" },
-  { src: "/media/ig12.jpg", alt: "Piezas de temporada" },
-  { src: "/media/ig05.jpg", alt: "Stand 15 en feria Mujeres Reales" },
-] as const;
+export const BAGS: Bag[] = [
+  {
+    id: "red-crema",
+    name: "Red en crema",
+    image: "/media/bolso-red-crema.jpg",
+    blurb: "Macramé en red, forro interior y cuentas de madera.",
+  },
+  {
+    id: "red-oliva",
+    name: "Red en oliva",
+    image: "/media/bolso-red-oliva.jpg",
+    blurb: "Macramé en verde oliva, forro oscuro y cuentas de madera.",
+  },
+  {
+    id: "mini-beige",
+    name: "Mini beige",
+    image: "/media/bolso-mini-beige.jpg",
+    blurb: "Asa redonda, strap largo y perlas en los flecos.",
+  },
+  {
+    id: "burbuja-cafe",
+    name: "Burbuja café",
+    image: "/media/bolso-burbuja-cafe.jpg",
+    blurb: "Punto burbuja, manijas doradas y perlas.",
+  },
+  {
+    id: "asas-madera",
+    name: "Asas de madera",
+    image: "/media/bolso-asas-madera.jpg",
+    blurb: "Crema tejido, asas rígidas de madera oscura.",
+  },
+];
