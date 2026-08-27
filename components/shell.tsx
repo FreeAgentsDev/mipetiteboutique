@@ -15,11 +15,8 @@ const LINKS = [
 export function Header() {
   return (
     <header className="mb-10 flex flex-wrap items-center justify-between gap-4">
-      <Link href="/" className="leading-tight" aria-label="Mi Petite Boutique">
-        <Wordmark className="block text-[1.65rem] text-ink" />
-        <span className="text-[10px] font-light tracking-[0.22em] text-mute uppercase">
-          By Isa Quintero
-        </span>
+      <Link href="/" className="shrink-0" aria-label="Mi Petite Boutique">
+        <Wordmark />
       </Link>
       <nav className="flex flex-wrap gap-3 text-xs font-medium tracking-wide text-mute uppercase">
         {LINKS.map((l) => (

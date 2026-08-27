@@ -5,28 +5,35 @@ type Props = {
 };
 
 export function BrandMark({ size = "lg" }: Props) {
+  const px = size === "lg" ? 440 : 96;
   return (
     <Image
       src="/logo.jpg"
       alt="Mi Petite Boutique · By Isa Quintero"
-      width={size === "lg" ? 320 : 96}
-      height={size === "lg" ? 320 : 96}
+      width={px}
+      height={px}
       quality={100}
       unoptimized
       priority
       className={
         size === "lg"
-          ? "mx-auto size-[180px] rounded-full object-cover shadow-[0_8px_40px_rgba(61,52,46,0.12)] sm:size-[220px]"
-          : "size-16 rounded-full object-cover"
+          ? "mx-auto size-[200px] rounded-full object-cover sm:size-[240px]"
+          : "size-12 rounded-full object-cover"
       }
     />
   );
 }
 
-export function Wordmark({ className = "" }: { className?: string }) {
+export function Wordmark() {
   return (
-    <span className={`font-[family-name:var(--font-script)] ${className}`}>
-      Mi Petite Boutique
-    </span>
+    <Image
+      src="/logo.jpg"
+      alt="Mi Petite Boutique"
+      width={72}
+      height={72}
+      quality={100}
+      unoptimized
+      className="size-[4.5rem] rounded-full object-cover"
+    />
   );
 }

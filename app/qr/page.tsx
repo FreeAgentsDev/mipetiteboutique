@@ -21,8 +21,7 @@ export default function QrPage() {
           height={280}
           className="mx-auto mt-6 size-[220px] rounded-2xl bg-cream p-2"
         />
-        <p className="mt-4 font-serif text-xl italic">{SITE.name}</p>
-        <p className="mt-1 text-[11px] font-medium tracking-[0.22em] uppercase text-mute">
+        <p className="mt-4 text-[11px] font-medium tracking-[0.22em] uppercase text-mute">
           {SITE.tagline}
         </p>
         <p className="mt-2 break-all text-xs text-mute">{url}</p>
