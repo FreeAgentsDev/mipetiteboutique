@@ -7,14 +7,14 @@ import { SITE } from "@/lib/site";
 
 const LINKS = [
   { href: "/", label: "Inicio" },
-  { href: "/catalogo", label: "Catálogo" },
+  { href: "/catalogo", label: "Bolsos" },
   { href: "/#lookbook", label: "Lookbook" },
   { href: "/qr", label: "QR" },
 ];
 
 export function Header() {
   return (
-    <header className="mb-10 flex flex-wrap items-center justify-between gap-4 print:hidden">
+    <header className="mb-10 flex flex-wrap items-center justify-between gap-4">
       <Link href="/" className="leading-tight" aria-label="Mi Petite Boutique">
         <Wordmark className="block text-[1.65rem] text-ink" />
         <span className="text-[10px] font-light tracking-[0.22em] text-mute uppercase">
@@ -34,7 +34,7 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="mt-16 border-t border-ink/10 pt-6 text-center text-xs text-mute print:hidden">
+    <footer className="mt-16 border-t border-ink/10 pt-6 text-center text-xs text-mute">
       <p className="tracking-[0.18em] uppercase">{SITE.city}</p>
       <p className="mt-2">
         <a
@@ -76,7 +76,7 @@ export function Footer() {
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
     <CartProvider>
-      <div className="mx-auto min-h-dvh max-w-lg px-5 py-8 pb-28 print:pb-8">
+      <div className="mx-auto min-h-dvh max-w-lg px-5 py-8 pb-28">
         <Header />
         {children}
         <Footer />

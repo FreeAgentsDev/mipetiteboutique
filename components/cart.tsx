@@ -28,14 +28,14 @@ type CartContextValue = {
   orderText: string;
 };
 
-const STORAGE_KEY = "petite-cart";
+const STORAGE_KEY = "petite-cart-v2";
 const CartContext = createContext<CartContextValue | null>(null);
 
 function buildOrder(lines: CartLine[]) {
   const body = lines
     .map((line) => `• ${line.qty}× ${line.name}`)
     .join("\n");
-  return `Hola Isa, vi el catálogo de Mi Petite Boutique y quiero pedir:\n\n${body}`;
+  return `Hola Isa, vi los bolsos de Mi Petite Boutique y quiero pedir:\n\n${body}`;
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
@@ -107,7 +107,7 @@ export function CartBar() {
   if (count === 0) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] print:hidden">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
       <div className="pointer-events-auto mx-auto max-w-lg overflow-hidden rounded-3xl border border-ink/10 bg-paper shadow-[0_-8px_40px_rgba(61,52,46,0.18)]">
         <div className="max-h-40 overflow-auto px-4 py-3">
           {lines.map((line) => (

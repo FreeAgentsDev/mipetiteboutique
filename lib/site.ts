@@ -33,66 +33,30 @@ export function qrImageUrl(data: string, size = 280) {
   return `https://api.qrserver.com/v1/create-qr-code/?${params.toString()}`;
 }
 
-export type Product = {
+export type BagColor = {
   id: string;
   name: string;
-  category: string;
-  image: string;
-  blurb: string;
+  swatch: string;
 };
 
-export const PRODUCTS: Product[] = [
-  {
-    id: "bolso-macrame",
-    name: "Bolso de macramé",
-    category: "Bolsos",
-    image: "/media/ig01.jpg",
-    blurb: "Tejido a mano, asas de bambú.",
-  },
-  {
-    id: "collares-dorados",
-    name: "Collares dorados",
-    category: "Collares",
-    image: "/media/ig08.jpg",
-    blurb: "Cadenas y dijes para usar todos los días.",
-  },
-  {
-    id: "perlas-concha",
-    name: "Perlas y concha",
-    category: "Collares",
-    image: "/media/ig12.jpg",
-    blurb: "Collar de perlas con dije de concha.",
-  },
-  {
-    id: "capas-dijes",
-    name: "Capas con dijes",
-    category: "Collares",
-    image: "/media/ig10.jpg",
-    blurb: "Tres capas, corazón y flores.",
-  },
-  {
-    id: "joyero-feria",
-    name: "Piezas del stand",
-    category: "Aretes",
-    image: "/media/ig07.jpg",
-    blurb: "Aretes y collares como en Expoferias.",
-  },
-  {
-    id: "prendas",
-    name: "Prendas de temporada",
-    category: "Prendas",
-    image: "/media/ig05.jpg",
-    blurb: "Lo que Isa lleva al stand, además de los accesorios.",
-  },
-];
+export const BAG = {
+  id: "bolso-macrame",
+  name: "Bolso de macramé",
+  image: "/media/ig01.jpg",
+  blurb:
+    "El mismo modelo, tejido a mano, asas de bambú. Elige el color; Isa confirma si hay existencias.",
+  colors: [
+    { id: "natural", name: "Natural", swatch: "#e8d9c4" },
+    { id: "yute", name: "Yute", swatch: "#c4a574" },
+    { id: "negro", name: "Negro", swatch: "#1c1917" },
+  ] satisfies BagColor[],
+} as const;
 
 export const LOOKBOOK = [
-  { src: "/media/ig08.jpg", alt: "Stand de Mi Petite Boutique" },
   { src: "/media/ig01.jpg", alt: "Bolso de macramé" },
-  { src: "/media/ig12.jpg", alt: "Collar de perlas y aretes de concha" },
-  { src: "/media/ig10.jpg", alt: "Collar en capas con dijes" },
-  { src: "/media/ig07.jpg", alt: "Joyero del stand" },
-  { src: "/media/ig09.jpg", alt: "Isa con accesorios" },
+  { src: "/media/ig08.jpg", alt: "Stand de Mi Petite Boutique" },
+  { src: "/media/ig11.jpg", alt: "Bolso macramé" },
+  { src: "/media/ig07.jpg", alt: "Accesorios de feria" },
+  { src: "/media/ig12.jpg", alt: "Piezas de temporada" },
   { src: "/media/ig05.jpg", alt: "Stand 15 en feria Mujeres Reales" },
-  { src: "/media/ig11.jpg", alt: "Bolso macramé y aretes" },
 ] as const;
