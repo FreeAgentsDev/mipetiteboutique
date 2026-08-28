@@ -21,35 +21,44 @@ function BagCard({ bag, priority }: { bag: Bag; priority?: boolean }) {
         />
       </div>
       <div className="px-5 py-5">
-        <p className="text-[10px] font-medium tracking-[0.18em] text-mute uppercase">
-          Bolsos
+        <p className="text-[10px] font-medium tracking-[0.18em] text-gold uppercase">
+          L’âme
         </p>
-        <h3 className="mt-1 font-serif text-2xl leading-tight">{bag.name}</h3>
+        <h3 className="mt-1 font-serif text-2xl leading-tight italic">
+          {bag.name}
+        </h3>
         <p className="mt-2 text-sm leading-relaxed text-mute">{bag.blurb}</p>
-        <p className="mt-3 text-[11px] text-gold">Precio al confirmar</p>
+        {bag.colorChoice ? (
+          <p className="mt-2 text-[11px] leading-relaxed text-mute">
+            Disponible en otros colores según los materiales. Escríbenos por
+            WhatsApp para confirmar ♡
+          </p>
+        ) : null}
+        <p className="mt-3 text-[11px] text-mute">Te confirmamos el valor ♡</p>
         <button
           type="button"
           onClick={() =>
             add({
               id: bag.id,
               name: bag.name,
-              category: "Bolsos",
+              category: "L’âme",
             })
           }
           className="mt-4 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink text-sm font-medium tracking-wide text-cream"
         >
-          Agregar
+          Lo quiero ♡
         </button>
       </div>
     </article>
   );
 }
 
-export function Catalog() {
+export function Catalog({ limit }: { limit?: number }) {
+  const items = limit ? BAGS.slice(0, limit) : BAGS;
   return (
-    <div className="flex flex-col gap-6">
-      {BAGS.map((bag) => (
-        <BagCard key={bag.id} bag={bag} priority={bag.id === BAGS[0].id} />
+    <div className="grid gap-6 sm:grid-cols-2">
+      {items.map((bag, index) => (
+        <BagCard key={bag.id} bag={bag} priority={index === 0} />
       ))}
     </div>
   );

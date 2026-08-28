@@ -127,11 +127,11 @@ export function QrDownload(props: Props) {
         disabled={busy}
         className={props.className}
       >
-        {busy ? "Preparando…" : "Descargar QR"}
+        {busy ? "Preparando…" : "Descargar diseño"}
       </button>
       {error ? (
         <p className="mt-2 text-center text-xs">
-          No se pudo armar el archivo. Recarga e inténtalo de nuevo.
+          No pudimos preparar el diseño. Recarga e inténtalo de nuevo.
         </p>
       ) : null}
     </div>

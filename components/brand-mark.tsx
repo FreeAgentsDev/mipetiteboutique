@@ -9,7 +9,7 @@ export function BrandMark({ size = "lg" }: Props) {
   return (
     <Image
       src="/logo.jpg"
-      alt="Mi Petite Boutique · By Isa Quintero"
+      alt="MiPetiteBoutique"
       width={px}
       height={px}
       quality={100}
@@ -28,7 +28,7 @@ export function Wordmark() {
   return (
     <Image
       src="/logo.jpg"
-      alt="Mi Petite Boutique"
+      alt="MiPetiteBoutique"
       width={72}
       height={72}
       quality={100}

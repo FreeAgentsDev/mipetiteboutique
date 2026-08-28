@@ -23,18 +23,30 @@ const script = Great_Vibes({
   variable: "--font-script-loaded",
 });
 
-const title = `${SITE.name} · Accesorios`;
+const title = "MiPetiteBoutique | Accesorios, bolsos y detalles especiales";
 const description =
-  "Accesorios y prendas hechas para elevar el estilo. Manizales, envíos a toda Colombia. Pide por Instagram.";
+  "Descubre MiPetiteBoutique: accesorios, bolsos y piezas especiales para complementar tu estilo. Encuentra detalles únicos desde Manizales, Colombia.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.publicUrl),
   title,
   description,
+  keywords: [
+    "MiPetiteBoutique",
+    "accesorios",
+    "bolsos",
+    "moda femenina",
+    "accesorios femeninos",
+    "bolsos tejidos",
+    "macramé",
+    "Manizales",
+    "Colombia",
+  ],
   icons: { icon: "/logo.jpg" },
   openGraph: {
     title,
     description,
+    siteName: "MiPetiteBoutique",
     locale: "es_CO",
     type: "website",
     images: ["/logo.jpg"],

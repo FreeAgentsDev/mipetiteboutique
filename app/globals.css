@@ -4,26 +4,26 @@
   --font-sans: var(--font-sans-loaded), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-serif-loaded), ui-serif, Georgia, serif;
   --font-script: var(--font-script-loaded), cursive;
-  --color-cream: #f5eee6;
+  --color-cream: #f7f1ea;
   --color-paper: #fffcf8;
   --color-ink: #3d342e;
-  --color-mute: #7a6c62;
-  --color-blush: #e8b4a2;
-  --color-rose: #c45c78;
+  --color-mute: #8a7a72;
+  --color-blush: #e8cfc4;
+  --color-rose: #c9a396;
   --color-gold: #c4a574;
 }
 
 html {
-  background: #f5eee6;
+  background: #f7f1ea;
   color: #3d342e;
 }
 
 body {
   min-height: 100dvh;
-  background: #f5eee6;
+  background: #f7f1ea;
 }
 
 ::selection {
-  background: #e8b4a2;
+  background: #e8cfc4;
   color: #3d342e;
 }
